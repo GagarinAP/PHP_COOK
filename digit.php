@@ -39,5 +39,11 @@
 		printf("<br>%d squared is %d\n",$n,$square);
 	}
 	print '<br>';
-	$random_number = mt_rand(1,1000);
+	$random_number = mt_rand(0,255);
 	print $random_number;
+
+	$red = mt_rand(0,255);
+	$green = mt_rand(0,255);
+	$blue = mt_rand(0,255);
+	$color = sprintf('#%02X%02X%02X',$red,$green,$blue);// %02X
+	print_r('<div style="background-color:'.$color.';width:100%;height:30px;margin:auto;">Hello</div>');
